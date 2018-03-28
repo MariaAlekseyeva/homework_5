@@ -1,0 +1,141 @@
+.wrapper {
+    position: relative;
+    width: 324px;
+    height: 356px;
+    margin: auto;
+}
+
+.head{
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid black;
+    left: 136px;
+    top: 63px;
+}
+
+.body {
+    position: absolute;
+    width: 103px;
+    height: 120px;
+    background: white;
+    border:1px solid black;
+    transform: perspective(450px) rotateX(-45deg) scale(1.02,1.4);
+    left: 110px;
+    top: 156px;
+}
+
+.arm {
+    position: absolute;
+    width: 1px;
+    height: 112px;
+    background: black;
+    animation: arm-rotation 0.5s infinite alternate;
+}
+
+@keyframes arm-rotation {
+    from {transform: rotate(5.5deg);}
+    to {transform: rotate(-5.5deg);}
+}
+
+.left-arm {
+    left: 101px;
+    top: 148px;
+    transform-origin: top;
+}
+
+.hand {
+    position: absolute;
+    width: 47px;
+    height: 1px;
+    background: black;
+    animation: hand-rotation 1s infinite linear;
+}
+
+@keyframes hand-rotation {
+    from {transform: rotate(359deg);}
+    to {transform: rotate(0deg);}
+}
+
+.left-hand {
+    left: 1px;
+    top: 111px;
+    transform-origin: left;
+}
+
+.right-arm {
+    left: 224px;
+    top: 148px;
+    transform-origin: top;
+    animation: arm-rotation 0.5s infinite alternate;
+}
+
+.right-hand {
+    left: 1px;
+    top: 111px;
+    transform-origin: left;
+    animation-direction: reverse;
+}
+
+.ball {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background: red;
+    border-radius: 50%;
+}
+
+.ball-left-1 {
+    position: absolute;
+    left: 122px;
+    top: 230px;
+    animation: ball-normal 2s infinite linear;
+}
+
+@keyframes ball-normal {
+    0%  {transform:translate(0px,0px) ;}
+    12.5% {transform:translate(-14px,-118px) ;}
+    25% {transform:translate(-26px,-188px) ;}
+    37.5% {transform:translate(-42px,-209px) ;}
+    50% {transform:translate(-57px,-175px) ;}
+    62.5% {transform:translate(-73px,-71px) ;}
+    75% {transform:translate(-82px,32px) ;}
+    87.5% {transform:translate(-38px,77px) ;}
+    100% {transform:translate(0px,0px) ;}
+}
+
+.ball-left-2 {
+    position: absolute;
+    left: 122px;
+    top: 230px;
+    animation: ball-delayed 2s infinite linear;
+}
+
+@keyframes ball-delayed {
+    0% {transform:translate(-57px,-175px) ;}
+    12.5% {transform:translate(-73px,-71px) ;}
+    25% {transform:translate(-82px,32px) ;}
+    37.5% {transform:translate(-38px,77px) ;}
+    50%  {transform:translate(0px,0px) ;}
+    62.5% {transform:translate(-14px,-118px) ;}
+    75% {transform:translate(-26px,-188px) ;}
+    87.5% {transform:translate(-42px,-209px) ;}
+    100% {transform:translate(-57px,-175px) ;}
+}
+
+.ball-right-1 {
+    position: absolute;
+    left: 248px;
+    top: 230px;
+    animation: ball-normal 2s infinite linear;
+    animation-direction: reverse;
+}
+
+.ball-right-2 {
+    position: absolute;
+    left: 248px;
+    top: 230px;
+    animation: ball-delayed 2s infinite linear;
+    animation-direction: reverse;
+}
